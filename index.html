@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>이벤트</title>
+
+<style>
+* {margin:0; padding: 0;}
+li {list-style: none}
+ul#photo_list {
+	border:2px solid lime; 
+	display: inline-block; 
+	padding: 20px;
+}
+ul#photo_list > li {
+	border:1px solid orange;  
+	float:left; 
+	padding: 20px; 
+	position: relative;
+}
+ul#photo_list > li > a {
+	border:1px solid black;
+	padding: 10px;
+}
+ul#photo_list ul {
+	display: none;
+	background-color: yellow; 
+	position: absolute; 
+	top:40px; 
+	left:0; 
+	width: 100px;
+	padding: 10px;
+	z-index: 100;
+	border:1px solid lime;
+	transition:all 1s ease;
+	opacity: 0;
+}
+ul#photo_list ul.on ul {
+	display: block;
+	opacity: 1;
+}
+ul#photo_list ul > li {
+	border:1px solid orange;
+	padding: 5px;
+}
+ul#photo_list ul > li > a {
+	text-decoration: none;
+	border:1px solid black;
+}
+body {padding:30px;}
+</style>
+</head>
+
+<body>
+
+<ul id="photo_list">
+	<li>
+		<a href="">건물</a>
+		<ul>
+			<li><a href="">남산타워</a></li>
+			<li><a href="">63빌딩</a></li>
+			<li><a href="">63빌딩</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="">커피</a>
+		<ul>
+			<li><a href="">아메리카노</a></li>
+			<li><a href="">카페라테</a></li>
+			<li><a href="">카페라테</a></li>
+			<li><a href="">카페라테</a></li>
+			<li><a href="">카페라테</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="">불꽃놀이</a>
+		<ul>
+			<li><a href="">한강축제</a></li>
+			<li><a href="">금강축제</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="">장미</a>
+
+	</li>
+</ul>
+
+
+</body>
+
+<script>
+
+
+////////////////////// 	on지우기
+// let menus = document.querySelectorAll('#photo_list > li > a');
+
+// for(let i = 0; i < menus.length; i++) {
+// 	menus[i].onclick = function (ev) {
+// 		let target = ev.target.parentNode;
+// 		if (target.className === 'on') {
+// 			target.className = '';
+// 		} else {
+// 			//on이 있는 애들 on지우기
+// 			for (let i = 0; i < menus.length; i++) {
+// 				menus[1].parentNode.className ='';
+// 			}
+// 			target.className = 'on'
+// 		}
+// 		console.log(target,i);
+// 		return false;
+// 	}
+// }
+
+//////////////////	
+// let menus = document.querySelectorAll('#photo_list > li > a');
+
+// for (let i = 0; i < menus.length; i++) {
+// 	menus[i].onclick = function (ev){
+// 		ev.target.parentNode.className = 'on';
+// 		console.log(ev.target.parentNode, i);
+// 	// ev.preventDefault;
+// 		return false;
+// 	}
+// }
+
+// ////////////////////
+// menus[0].onclick = function (d){
+// 	console.log()
+// }
+// menus[0].onclick = function (d){
+// 	console.log()
+// }
+// menus[0].onclick = function (d){
+// 	console.log()
+// }
+// menus[0].onclick = function (d){
+// 	console.log()
+// }
+////////////////////
+
+// let menu = document.querySelector('#photo_list');
+
+// menu.addEventListener('click',clickWork);
+
+// function clickWork(d){
+// 	if (d.target.tagName !== 'A')return;
+// 	d.preventDefault();
+// 	console.log(d.target.textContent)
+// }
+////////////////////	
+
+// let menu = document.querySelector('#photo_list');
+
+// menu.addEventListener('click',clickWork);
+
+// function clickWork(d){
+// 	if (d.target.tagName !== 'A')return;
+// 	d.preventDefault();
+// 	console.log(d.target.textContent)
+// }
+//////////////////
+
+// let menuAs = document.querySelectorAll('#photo_list > li > a');
+
+// for (let i = 0; i < menuAs.length; i++){
+// 	menuAs[i].addEventListener('click', clickWork);
+// }
+// function clickWork(d){
+// 	d.preventDefault();
+// 	console.log(d.target.textContent)
+// }
+//////////////////////////
+
+// let menuAs = document.querySelectorAll('#photo_list > li > a');
+// console.log(menuAs);
+
+// menuAs[0].addEventListener('click', clickWork);
+// menuAs[1].addEventListener('click', clickWork);
+// menuAs[2].addEventListener('click', clickWork);
+// menuAs[3].addEventListener('click', clickWork);
+
+// function clickWork(d){
+// 	d.preventDefault();
+// 	console.log('ok')
+// }
+
+// console.log(menuAs);
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
